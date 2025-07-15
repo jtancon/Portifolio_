@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giordana Cavichioli de Carvalho | Estudante de Biomedicina</title>
+    <link rel="icon" type="image/png" href="./image_3f57e9.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Paleta de Cores e Fontes */
+        :root {
+            --primary-color: #3c88ae;
+            --primary-color-light: #d8e6e7;
+            --primary-color-dark: #3a6469;
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --text-dark: #334155;
+            --text-light: #64748b;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-light);
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+        }
+
+        /* Estilos da Navegação */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--primary-color);
+            transition: width 0.3s ease-out;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            color: var(--primary-color);
+        }
+
+        /* Animações de Scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-white/90 backdrop-blur-lg shadow-sm fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Image Icon Logo -->
+            <a href="#home" class="block" aria-label="Homepage Logo">
+                <img src="./icone.png" alt="Logotipo GC" class="h-12 w-12 object-contain">
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide">
+                <a href="#home" class="nav-link text-slate-600 hover:text-[var(--primary-color)]">INÍCIO</a>
+                <a href="#sobre" class="nav-link text-slate-600 hover:text-[var(--primary-color)]">SOBRE</a>
+                <a href="#carreira" class="nav-link text-slate-600 hover:text-[var(--primary-color)]">CARREIRA</a>
+                <a href="#habilidades" class="nav-link text-slate-600 hover:text-[var(--primary-color)]">HABILIDADES</a>
+                <a href="#acoes-sociais" class="nav-link text-slate-600 hover:text-[var(--primary-color)]">AÇÕES SOCIAIS</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-slate-700">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+            <a href="#home" class="block py-3 px-6 text-sm text-slate-700 hover:bg-[var(--primary-color-light)]">Início</a>
+            <a href="#sobre" class="block py-3 px-6 text-sm text-slate-700 hover:bg-[var(--primary-color-light)]">Sobre</a>
+            <a href="#carreira" class="block py-3 px-6 text-sm text-slate-700 hover:bg-[var(--primary-color-light)]">Carreira</a>
+            <a href="#habilidades" class="block py-3 px-6 text-sm text-slate-700 hover:bg-[var(--primary-color-light)]">Habilidades</a>
+            <a href="#acoes-sociais" class="block py-3 px-6 text-sm text-slate-700 hover:bg-[var(--primary-color-light)]">Ações Sociais</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section: Home -->
+        <section id="home" class="min-h-screen flex items-center bg-white py-24 md:py-20">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-5 gap-8 items-center">
+                    <!-- Text Column -->
+                    <div class="md:col-span-3 text-center md:text-left reveal">
+                        <p class="font-semibold mb-2" style="color: var(--primary-color);">OLÁ, EU SOU</p>
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold section-title mb-4">Giordana Cavichioli de Carvalho</h2>
+                        <p class="text-lg md:text-xl text-slate-500 max-w-xl mx-auto md:mx-0">Estudante de Biomedicina dedicada à pesquisa e inovação na saúde.</p>
+                        <div class="mt-10 flex justify-center md:justify-start space-x-4">
+                            <a href="mailto:email@example.com" class="text-white py-3 px-8 rounded-full transition-all duration-300 shadow-lg font-semibold transform hover:scale-105" style="background-color: var(--primary-color); box-shadow: 0 10px 15px -3px rgba(79, 134, 140, 0.3), 0 4px 6px -2px rgba(79, 134, 140, 0.2);">Entre em Contato</a>
+                        </div>
+                    </div>
+                    <!-- Image Column -->
+                    <div class="md:col-span-2 flex justify-center reveal" style="transition-delay: 200ms;">
+                        <div class="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
+                            <div class="absolute inset-0 rounded-full transform rotate-6" style="background-color: var(--primary-color-light);"></div>
+                            <img src="./perfil.jpg" alt="Foto de Perfil de Giordana Cavichioli" class="relative w-full h-full rounded-full object-cover border-8 border-white shadow-2xl" onerror="this.onerror=null;this.src='https://placehold.co/384x384/f8fafc/333333?text=GC';">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Sobre -->
+        <section id="sobre" class="py-20 md:py-32" style="background-color: var(--bg-main);">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto reveal">
+                    <h3 class="text-3xl md:text-4xl font-bold section-title mb-6">Sobre Mim</h3>
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        Sou uma estudante de biomedicina do quarto período, apaixonada pelo impacto da ciência na vida das pessoas. Estou construindo uma base em análises clínicas e pesquisa, buscando expandir meu conhecimento para diversas áreas de atuação e aplicar minhas habilidades em novos desafios.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Minha jornada acadêmica é pautara pela curiosidade e sede por conhecimento e aprendizado.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Carreira -->
+        <section id="carreira" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl md:text-4xl font-bold text-center section-title mb-16 reveal">Trajetória Acadêmica e Profissional</h3>
+                <div class="max-w-3xl mx-auto">
+                    <!-- Timeline Item 1: Education -->
+                    <div class="flex items-start mb-12 reveal">
+                        <div class="flex flex-col items-center mr-6">
+                            <div class="flex-shrink-0 w-12 h-12 text-white rounded-full flex items-center justify-center" style="background-color: var(--primary-color);"><i class="fas fa-graduation-cap text-xl"></i></div>
+                            <div class="w-px h-full bg-slate-300 mt-2"></div>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg w-full">
+                            <p class="text-sm font-semibold mb-1" style="color: var(--primary-color-dark);">2024 - Presente</p>
+                            <h4 class="text-xl font-bold">Bacharelado em Biomedicina (Cursando - 4º Período)</h4>
+                            <p class="text-md text-slate-500 italic">Universidade Positivo</p>
+                            <p class="mt-2 text-slate-600">Graduando com foco em estética e análises clínicas, buscando oportunidades de estágio para desenvolver cada vez mais minhas habilidades.</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item 2: Internship -->
+                    <div class="flex items-start mb-12 reveal">
+                        <div class="flex flex-col items-center mr-6">
+                            <div class="flex-shrink-0 w-12 h-12 text-white rounded-full flex items-center justify-center" style="background-color: var(--primary-color);"><i class="fas fa-graduation-cap text-xl"></i></div>
+                            <div class="w-px h-full bg-slate-300 mt-2"></div>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg w-full">
+                            <p class="text-sm font-semibold mb-1" style="color: var(--primary-color-dark);">2025 - Presente</p>
+                            <h4 class="text-xl font-bold">Curso de Instrumentação Cirurgica</h4>
+                            <p class="text-md text-slate-500 italic">No instituto de instrumentação cirurgica</p>
+                            <p class="mt-2 text-slate-600">Curso extracurricular realizado por interessa na área,  com foco em aprofundar em conhecimentos e habilidades práticas relacionadas ao tema.</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item 4: Internship -->
+                    <div class="flex items-start reveal">
+                        <div class="flex flex-col items-center mr-6">
+                            <div class="flex-shrink-0 w-12 h-12 text-white rounded-full flex items-center justify-center" style="background-color: var(--primary-color);"><i class="fas fa-flask-vial text-xl"></i></div>
+                        </div>
+                        <div class="bg-slate-50 p-3 rounded-lg w-full">
+                            <p class="text-sm font-semibold mb-1" style="color: var(--primary-color-dark);">2024</p>
+                            <h4 class="text-xl font-bold">Estagio em Análises Clinicas 2024</h4>
+                            <p class="text-md text-slate-500 italic">LANAC</p>
+                            <p class="mt-2 text-slate-600">Auxílio na área de microbiologia e processamento de amostras.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Habilidades -->
+        <section id="habilidades" class="py-20 md:py-32" style="background-color: var(--bg-main);">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl md:text-4xl font-bold text-center section-title mb-16 reveal">Habilidades</h3>
+        
+                <!-- Habilidades Técnicas -->
+                <div class="mb-16">
+                    <h4 class="text-2xl md:text-3xl font-bold text-center section-title mb-12 reveal">Habilidades Técnicas</h4>
+                    <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Card: Análises Clínicas -->
+                        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center reveal">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: var(--primary-color-light); color: var(--primary-color);"><i class="fas fa-microscope text-2xl"></i></div>
+                            <h4 class="text-xl font-bold mb-2">Análises Clínicas</h4>
+                            <p class="text-slate-600 text-sm">Conhecimentos teóricos em hematologia, bioquímica, imunologia e microbiologia.</p>
+                        </div>
+                        <!-- Card: Biologia Molecular -->
+                        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center reveal" style="transition-delay: 100ms;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: var(--primary-color-light); color: var(--primary-color);"><i class="fas fa-dna text-2xl"></i></div>
+                            <h4 class="text-xl font-bold mb-2">Biologia Molecular</h4>
+                            <p class="text-slate-600 text-sm">Experiência com PCR e Eletroforese, adquirida durante estágio em pesquisa.</p>
+                        </div>
+                        <!-- Card: Controle de Qualidade -->
+                        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center reveal" style="transition-delay: 200ms;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: var(--primary-color-light); color: var(--primary-color);"><i class="fas fa-check-double text-2xl"></i></div>
+                            <h4 class="text-xl font-bold mb-2">Controle de Qualidade</h4>
+                            <p class="text-slate-600 text-sm">Compreensão das normas de qualidade (PALC, ISO) e sua importância.</p>
+                        </div>
+                        <!-- Card: Análise de Dados -->
+                        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center reveal" style="transition-delay: 300ms;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: var(--primary-color-light); color: var(--primary-color);"><i class="fas fa-chart-pie text-2xl"></i></div>
+                            <h4 class="text-xl font-bold mb-2">Análise de Dados</h4>
+                            <p class="text-slate-600 text-sm">Habilidade para auxiliar em experimentos, coletar dados e participar da análise.</p>
+                        </div>
+                        <!-- Card: Idiomas -->
+                        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center reveal" style="transition-delay: 400ms;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: var(--primary-color-light); color: var(--primary-color);"><i class="fas fa-language text-2xl"></i></div>
+                            <h4 class="text-xl font-bold mb-2">Idiomas</h4>
+                            <p class="text-slate-600 text-sm">Português (Nativo), Inglês (Fluente), Espanhol (Básico) e Alemão (Básico).</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Habilidades Interpessoais -->
+                <div>
+                    <h4 class="text-2xl md:text-3xl font-bold text-center section-title mb-12 reveal">Habilidades Interpessoais</h4>
+                    <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Card: Comunicação -->
+                        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center reveal">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: var(--primary-color-light); color: var(--primary-color);"><i class="fas fa-comments text-2xl"></i></div>
+                            <h4 class="text-xl font-bold mb-2">Comunicação</h4>
+                            <p class="text-slate-600 text-sm">Capacidade de apresentar informações de forma clara para públicos diversos.</p>
+                        </div>
+                        <!-- Card: Relacionamento Interpessoal -->
+                        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center reveal" style="transition-delay: 100ms;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: var(--primary-color-light); color: var(--primary-color);"><i class="fas fa-users text-2xl"></i></div>
+                            <h4 class="text-xl font-bold mb-2">Relacionamento Interpessoal</h4>
+                            <p class="text-slate-600 text-sm">Facilidade em construir e manter relações profissionais positivas e colaborativas.</p>
+                        </div>
+                        <!-- Card: Trabalho em Equipe -->
+                        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center reveal" style="transition-delay: 200ms;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: var(--primary-color-light); color: var(--primary-color);"><i class="fas fa-people-group text-2xl"></i></div>
+                            <h4 class="text-xl font-bold mb-2">Trabalho em Equipe</h4>
+                            <p class="text-slate-600 text-sm">Habilidade para colaborar com colegas em busca de objetivos comuns.</p>
+                        </div>
+                        <!-- Card: Proatividade -->
+                        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center reveal" style="transition-delay: 300ms;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: var(--primary-color-light); color: var(--primary-color);"><i class="fas fa-rocket text-2xl"></i></div>
+                            <h4 class="text-xl font-bold mb-2">Proatividade</h4>
+                            <p class="text-slate-600 text-sm">Iniciativa para identificar problemas e buscar soluções de forma autônoma.</p>
+                        </div>
+                        <!-- Card: Organização -->
+                        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center reveal" style="transition-delay: 400ms;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: var(--primary-color-light); color: var(--primary-color);"><i class="fas fa-tasks text-2xl"></i></div>
+                            <h4 class="text-xl font-bold mb-2">Organização</h4>
+                            <p class="text-slate-600 text-sm">Capacidade de gerenciar tarefas e prioridades de maneira eficiente.</p>
+                        </div>
+                        <!-- Card: Atendimento ao Cliente -->
+                        <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center reveal" style="transition-delay: 500ms;">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: var(--primary-color-light); color: var(--primary-color);"><i class="fas fa-headset text-2xl"></i></div>
+                            <h4 class="text-xl font-bold mb-2">Atendimento ao Cliente</h4>
+                            <p class="text-slate-600 text-sm">Foco em oferecer uma experiência positiva e resolutiva para o cliente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Ações Sociais -->
+        <section id="acoes-sociais" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl md:text-4xl font-bold text-center section-title mb-16 reveal">Engajamento e Ações Sociais</h3>
+                <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-8">
+                    <div class="bg-slate-50 p-8 rounded-lg reveal">
+                        <div class="mb-4"><i class="fas fa-heart-pulse text-3xl" style="color: var(--primary-color);"></i></div>
+                        <h4 class="text-xl font-bold">Voluntariado em Feiras de Saúde</h4>
+                        <p class="mt-2 text-slate-600">Participação em eventos comunitários, oferecendo triagem básica e orientações sobre prevenção de doenças.</p>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-lg reveal" style="transition-delay: 200ms;">
+                        <div class="mb-4"><i class="fas fa-users-rays text-3xl" style="color: var(--primary-color);"></i></div>
+                        <h4 class="text-xl font-bold">Divulgação Científica</h4>
+                        <p class="mt-2 text-slate-600">Palestras em escolas para despertar o interesse de jovens pela ciência e pela carreira biomédica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-slate-400" style="background-color: var(--text-dark);">
+        <div class="container mx-auto py-8 px-6 text-center">
+            <p>&copy; <span id="year"></span> Giordana Cavichioli de Carvalho. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = mobileMenuButton.querySelector('i');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            mobileMenuIcon.classList.toggle('fa-bars', isHidden);
+            mobileMenuIcon.classList.toggle('fa-times', !isHidden);
+        });
+
+        // --- Close Mobile Menu on Link Click ---
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.classList.add('fa-bars');
+                mobileMenuIcon.classList.remove('fa-times');
+            });
+        });
+
+        // --- Scroll Animations ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Anima apenas uma vez
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // --- Active Nav Link on Scroll ---
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = 'home';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 70) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // --- Set Footer Year ---
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
